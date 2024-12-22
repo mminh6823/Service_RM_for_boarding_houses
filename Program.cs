@@ -11,7 +11,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(option =>
           option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<DayTroService>();
-
+builder.Services.AddTransient<DichVuService>();
 
 
 var app = builder.Build();

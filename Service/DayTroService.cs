@@ -16,32 +16,37 @@ namespace Service_PhongTro.Service
             _dBContext = dBContext;
         }
 
-        //lấy danh sách dãy trọ
+       
         public List<DayTro> GetDayTroList() => _dBContext.dayTro.ToList();
 
-        //láy thông tin dãy trọ theo id
+      
         public DayTro GetDayTroByID(int id)
         {
             var getbyid = _dBContext.dayTro.Where(m => m.Id == id).FirstOrDefault();
             return getbyid;
         }
 
-        //thêm dãy trọ
+       
         public DayTro AddDayTro(DayTroDTO dayTroDTO)
         {
-            var _DayTro = new DayTro()
+            var check = _dBContext.dayTro.Any(m => m.tenDayTro == dayTroDTO.tenDayTro);
+            if (check != true)
             {
-                tenDayTro = dayTroDTO.tenDayTro,
-                soLuongPhong = dayTroDTO.soLuongPhong
-            };
-            _dBContext.Add(_DayTro);
-            _dBContext.SaveChanges();
+                var _DayTro = new DayTro()
+                {
+                    tenDayTro = dayTroDTO.tenDayTro,
+                    soLuongPhong = dayTroDTO.soLuongPhong
+                };
+                _dBContext.Add(_DayTro);
+                _dBContext.SaveChanges();
 
-            return _DayTro;
+                return _DayTro;
+            }
+            throw new Exception("Tên dãy trọ đã tồn tại! Vui lòng thêm tên khác");
         }
 
 
-        //sửa dãy trọ 
+        
         public DayTro UpdateDayTro(int ID, DayTroDTO dayTroDTO)
         {
             var UdDayTro = _dBContext.dayTro.FirstOrDefault(m => m.Id == ID);
@@ -56,18 +61,18 @@ namespace Service_PhongTro.Service
                 }
                 else
                 {
-                    throw new Exception("Không tìm thấy dãy trọ cần cập nhật.");
+                    throw new Exception( "Không tìm thấy dãy trọ cần cập nhật." );
                 }
             }
             else
             {
-                throw new Exception("Tên dãy trọ đã tồn tại, không thể cập nhật.");
+                throw new Exception("Dãy trọ đã tồn tại, không thể cập nhật.");
             }
             return UdDayTro;
 
         }
 
-        //xóa dãy trọ
+       
         public void DeleteDayTro(int ID)
         {
 
