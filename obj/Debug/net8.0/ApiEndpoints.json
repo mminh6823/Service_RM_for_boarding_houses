@@ -1,0 +1,101 @@
+[
+  {
+    "ContainingType": "Service_PhongTro.Controllers.DayTroController",
+    "Method": "addDayTro",
+    "RelativePath": "api/DayTro/add-daytro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dayTroDTO",
+        "Type": "Service_PhongTro.DTOs.DayTroDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.DayTroController",
+    "Method": "DeleteDayTro",
+    "RelativePath": "api/DayTro/delete-daytro",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.DayTroController",
+    "Method": "getDayTrobyID",
+    "RelativePath": "api/DayTro/get-daytro-by-id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.DayTroController",
+    "Method": "getdayTro",
+    "RelativePath": "api/DayTro/get-daytro-list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.DayTroController",
+    "Method": "UpdateDayTro",
+    "RelativePath": "api/DayTro/update-daytro",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "dayTroDTO",
+        "Type": "Service_PhongTro.DTOs.DayTroDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Service_PhongTro.WeatherForecast, Service_PhongTro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
