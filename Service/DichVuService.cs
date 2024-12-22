@@ -16,18 +16,19 @@ namespace Service_PhongTro.Service
         {
             _dBContext = dBContext;
         }
-          public List<DichVu> GetListDichVu() => _dBContext.dichVu.ToList();     
-          public List<DichVu> GetDichVubyID(int? id) =>(id.HasValue && id != 0) 
-            ? _dBContext.dichVu.Where(m=>m.Id == id).ToList()
-            : _dBContext.dichVu.ToList(); 
-           public DichVu AddDichVu(DichVuDTO dichVuDTO)
-        {   
+        public List<DichVu> GetListDichVu() => _dBContext.dichVu.ToList();
+        public List<DichVu> GetDichVubyID(int? id) => (id.HasValue && id != 0)
+          ? _dBContext.dichVu.Where(m => m.Id == id).ToList()
+          : _dBContext.dichVu.ToList();
+        public DichVu AddDichVu(DichVuDTO dichVuDTO)
+        {
             var checkname = _dBContext.dichVu.Any(m => m.tenDichVu == dichVuDTO.tenDichVu);
             if (checkname != true)
             {
-                var dichVu = new DichVu() { 
-                tenDichVu = dichVuDTO.tenDichVu,
-                giaDichVu = dichVuDTO.giaDichVu
+                var dichVu = new DichVu()
+                {
+                    tenDichVu = dichVuDTO.tenDichVu,
+                    giaDichVu = dichVuDTO.giaDichVu
                 };
                 _dBContext.Add(dichVu);
                 _dBContext.SaveChanges();
@@ -35,17 +36,17 @@ namespace Service_PhongTro.Service
             }
             throw new Exception("Tên dịch vụ đã tồn tại vui lòng thử lại! ");
         }
-           
+
         public DichVu UpdateDichVu(int id, DichVuDTO dichVuDTO)
         {
-            var udDichVu= _dBContext.dichVu.FirstOrDefault(m=>m.Id == id);  
+            var udDichVu = _dBContext.dichVu.FirstOrDefault(m => m.Id == id);
             var checkid = _dBContext.dichVu.Any(m => m.tenDichVu == dichVuDTO.tenDichVu && m.Id != id);
             if (checkid != true)
             {
                 if (udDichVu != null)
                 {
                     udDichVu.tenDichVu = dichVuDTO.tenDichVu;
-                    udDichVu.giaDichVu = dichVuDTO .giaDichVu;
+                    udDichVu.giaDichVu = dichVuDTO.giaDichVu;
                     _dBContext.SaveChanges();
                 }
                 else
@@ -53,7 +54,8 @@ namespace Service_PhongTro.Service
                     throw new Exception("Không tìm thấy dịch vụ cần cập nhật!");
                 }
             }
-            else {
+            else
+            {
                 throw new Exception("Tên dịch vụ đã tồn tại! Vui lòng nhập");
             }
             return udDichVu;

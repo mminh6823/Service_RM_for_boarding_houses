@@ -158,6 +158,52 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Service_PhongTro.Controllers.DichVuSuDungController",
+    "Method": "AddDichVuSuDung",
+    "RelativePath": "api/DichVuSuDung/add-dich-vu-sd",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dichVuSuDungDTO",
+        "Type": "Service_PhongTro.DTOs.GetDichVuSuDungDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.DichVuSuDungController",
+    "Method": "GetAllDichVuSd",
+    "RelativePath": "api/DichVuSuDung/get-all-detail-dich-vu-sd",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.DichVuSuDungController",
+    "Method": "GetDichVuSd",
+    "RelativePath": "api/DichVuSuDung/get-dich-vu-sd",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.DichVuSuDungController",
+    "Method": "GetAllList",
+    "RelativePath": "api/DichVuSuDung/get-dich-vu-sd-phong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Service_PhongTro.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

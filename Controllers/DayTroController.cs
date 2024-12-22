@@ -22,7 +22,7 @@ namespace Service_PhongTro.Controllers
         {
             _dayTroService = dayTroService;
         }
-    
+
         [HttpGet("get-daytro-list")]
         public IActionResult getdayTro()
         {
@@ -58,7 +58,7 @@ namespace Service_PhongTro.Controllers
             try
             {
                 var newDayTro = _dayTroService.AddDayTro(dayTroDTO);
-                return Ok(new {Message= $"Thêm thành công {newDayTro.tenDayTro}"});
+                return Ok(new { Message = $"Thêm thành công {newDayTro.tenDayTro}" });
             }
             catch (Exception ex)
             {

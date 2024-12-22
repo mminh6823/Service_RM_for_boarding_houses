@@ -16,17 +16,17 @@ namespace Service_PhongTro.Service
             _dBContext = dBContext;
         }
 
-       
+
         public List<DayTro> GetDayTroList() => _dBContext.dayTro.ToList();
 
-      
+
         public DayTro GetDayTroByID(int id)
         {
             var getbyid = _dBContext.dayTro.Where(m => m.Id == id).FirstOrDefault();
             return getbyid;
         }
 
-       
+
         public DayTro AddDayTro(DayTroDTO dayTroDTO)
         {
             var check = _dBContext.dayTro.Any(m => m.tenDayTro == dayTroDTO.tenDayTro);
@@ -46,7 +46,7 @@ namespace Service_PhongTro.Service
         }
 
 
-        
+
         public DayTro UpdateDayTro(int ID, DayTroDTO dayTroDTO)
         {
             var UdDayTro = _dBContext.dayTro.FirstOrDefault(m => m.Id == ID);
@@ -61,7 +61,7 @@ namespace Service_PhongTro.Service
                 }
                 else
                 {
-                    throw new Exception( "Không tìm thấy dãy trọ cần cập nhật." );
+                    throw new Exception("Không tìm thấy dãy trọ cần cập nhật.");
                 }
             }
             else
@@ -72,7 +72,7 @@ namespace Service_PhongTro.Service
 
         }
 
-       
+
         public void DeleteDayTro(int ID)
         {
 

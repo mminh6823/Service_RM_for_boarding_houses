@@ -74,7 +74,7 @@ namespace Service_PhongTro.Controllers
         {
             try
             {
-               _dichVuService.DeleteDichVu(id);
+                _dichVuService.DeleteDichVu(id);
                 return Ok("Xóa thành công");
             }
             catch (Exception ex)

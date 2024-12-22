@@ -12,7 +12,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(option =>
 
 builder.Services.AddTransient<DayTroService>();
 builder.Services.AddTransient<DichVuService>();
-
+builder.Services.AddTransient<DichVuSuDungService>();
 
 var app = builder.Build();
 
