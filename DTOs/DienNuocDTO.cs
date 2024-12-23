@@ -11,8 +11,9 @@
         public decimal giaNuoc { get; set; }
         public string? tenPhong { get; set; }
     }
-    public class GetPhongDTO {
+    public class GetPhongDTO
+    {
         public int Id { get; set; }
         public string? tenPhong { get; set; }
     }
-    }
+}

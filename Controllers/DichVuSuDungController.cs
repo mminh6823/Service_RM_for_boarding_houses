@@ -59,7 +59,7 @@ namespace Service_PhongTro.Controllers
             }
         }
         [HttpPost("add-dich-vu-sd")]
-        public IActionResult AddDichVuSuDung([FromBody]GetDichVuSuDungDTO dichVuSuDungDTO)
+        public IActionResult AddDichVuSuDung([FromBody] GetDichVuSuDungDTO dichVuSuDungDTO)
         {
             try
             {
@@ -68,6 +68,23 @@ namespace Service_PhongTro.Controllers
             }
             catch (Exception ex)
             {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpDelete("delete-dich-vu-sd")]
+        public IActionResult DeleteDichVuSuDung([FromQuery] int? idDichVu , [FromQuery] int? idPhong){
+
+            try
+            {
+                if (idDichVu.HasValue || idPhong.HasValue && idDichVu !=0 || idPhong!=0 )
+                {
+                    var deleteDichVuSd = _service.DeleteDichVuSuDung(idDichVu, idPhong);
+                    return Ok(new { Message = "Xóa thành công dịch vụ sử dụng" });
+                }
+                return BadRequest(new {Error= "Nhập sai vui lòng nhập lại"});
+            }
+            
+            catch (Exception ex) { 
                 return BadRequest(ex.Message);
             }
         }
