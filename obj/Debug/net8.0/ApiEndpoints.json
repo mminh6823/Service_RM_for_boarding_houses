@@ -293,6 +293,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Service_PhongTro.Controllers.LoaiPhongController",
+    "Method": "AddLoaiPhong",
+    "RelativePath": "api/LoaiPhong/add-loai-phong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loaiPhongDTO",
+        "Type": "Service_PhongTro.DTOs.LoaiPhongDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.LoaiPhongController",
+    "Method": "DeleteLoaiPhong",
+    "RelativePath": "api/LoaiPhong/delete-loai-phong",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.LoaiPhongController",
+    "Method": "GetLoaiPhong",
+    "RelativePath": "api/LoaiPhong/get-loai-phong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.LoaiPhongController",
+    "Method": "GetLoaiPhongbyID",
+    "RelativePath": "api/LoaiPhong/get-loai-phong-by-id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.LoaiPhongController",
+    "Method": "UpdateLoaiPhong",
+    "RelativePath": "api/LoaiPhong/update-loai-phong",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "loaiPhongDTO",
+        "Type": "Service_PhongTro.DTOs.LoaiPhongDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Service_PhongTro.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

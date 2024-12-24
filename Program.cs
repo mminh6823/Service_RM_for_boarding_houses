@@ -14,6 +14,8 @@ builder.Services.AddTransient<DayTroService>();
 builder.Services.AddTransient<DichVuService>();
 builder.Services.AddTransient<DichVuSuDungService>();
 builder.Services.AddTransient<DienNuocService>();
+builder.Services.AddTransient<LoaiPhongService>();
+
 
 var app = builder.Build();
 
