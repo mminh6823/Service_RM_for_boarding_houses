@@ -372,6 +372,178 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Service_PhongTro.Controllers.PhongController",
+    "Method": "AddPhong",
+    "RelativePath": "api/Phong/add-phong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phongDTO",
+        "Type": "Service_PhongTro.DTOs.PhongDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.PhongController",
+    "Method": "DeletePhong",
+    "RelativePath": "api/Phong/delete-phong",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.PhongController",
+    "Method": "GetAllPhong",
+    "RelativePath": "api/Phong/get-all-phong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.PhongController",
+    "Method": "GetDayTro",
+    "RelativePath": "api/Phong/get-day-tro",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.PhongController",
+    "Method": "GetLoaiPhong",
+    "RelativePath": "api/Phong/get-loai-phong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.PhongController",
+    "Method": "UpdatePhong",
+    "RelativePath": "api/Phong/update-phong",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "phongDTO",
+        "Type": "Service_PhongTro.DTOs.PhongDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanNguoiDungController",
+    "Method": "AddTaiKhoanNguoiDung",
+    "RelativePath": "api/TaiKhoanNguoiDung/add-taikhoannguoidung",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taiKhoanNguoiDungDTO",
+        "Type": "Service_PhongTro.DTOs.TaiKhoanNguoiDungDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanNguoiDungController",
+    "Method": "DeleteTaiKhoanNguoiDungId",
+    "RelativePath": "api/TaiKhoanNguoiDung/delete-taikhoannguoidung",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanNguoiDungController",
+    "Method": "GetAllNguoiThue",
+    "RelativePath": "api/TaiKhoanNguoiDung/get-all-nguoithue",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanNguoiDungController",
+    "Method": "GetAllTaiKhoanNguoiDung",
+    "RelativePath": "api/TaiKhoanNguoiDung/get-all-taikhoannguoidung",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanNguoiDungController",
+    "Method": "GetTaiKhoanNguoiDungId",
+    "RelativePath": "api/TaiKhoanNguoiDung/get-taikhoannguoidung",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanNguoiDungController",
+    "Method": "UpdateTaiKhoanNguoiDungId",
+    "RelativePath": "api/TaiKhoanNguoiDung/update-taikhoannguoidung",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "taiKhoanNguoiDungDTO",
+        "Type": "Service_PhongTro.DTOs.TaiKhoanNguoiDungDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Service_PhongTro.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

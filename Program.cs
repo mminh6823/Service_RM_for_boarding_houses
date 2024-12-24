@@ -15,8 +15,8 @@ builder.Services.AddTransient<DichVuService>();
 builder.Services.AddTransient<DichVuSuDungService>();
 builder.Services.AddTransient<DienNuocService>();
 builder.Services.AddTransient<LoaiPhongService>();
-
-
+builder.Services.AddTransient<PhongService>();
+builder.Services.AddTransient<TaiKhoanNguoiDungService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
