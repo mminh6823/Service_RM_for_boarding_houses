@@ -455,6 +455,69 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanController",
+    "Method": "DeleteTaiKhoan",
+    "RelativePath": "api/TaiKhoan/delete-taikhoan",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanController",
+    "Method": "GetAllTaiKhoan",
+    "RelativePath": "api/TaiKhoan/get-all-taikhoan",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanController",
+    "Method": "GetTaiKhoanId",
+    "RelativePath": "api/TaiKhoan/get-taikhoan",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.TaiKhoanController",
+    "Method": "UpdateTaiKhoan",
+    "RelativePath": "api/TaiKhoan/update-taikhoan",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "taikhoanDTO",
+        "Type": "Service_PhongTro.DTOs.TaiKhoanDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Service_PhongTro.Controllers.TaiKhoanNguoiDungController",
     "Method": "AddTaiKhoanNguoiDung",
     "RelativePath": "api/TaiKhoanNguoiDung/add-taikhoannguoidung",
@@ -538,6 +601,85 @@
       {
         "Name": "taiKhoanNguoiDungDTO",
         "Type": "Service_PhongTro.DTOs.TaiKhoanNguoiDungDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThongBaoController",
+    "Method": "AddThongBao",
+    "RelativePath": "api/ThongBao/add-thongbao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "thongBaoDTO",
+        "Type": "Service_PhongTro.DTOs.ThongBaoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThongBaoController",
+    "Method": "DeleteThongBao",
+    "RelativePath": "api/ThongBao/delete-thongbao",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThongBaoController",
+    "Method": "GetAllThongBao",
+    "RelativePath": "api/ThongBao/get-all-thongbao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThongBaoController",
+    "Method": "GetThongBaoId",
+    "RelativePath": "api/ThongBao/get-thongbao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThongBaoController",
+    "Method": "UpdateThongBao",
+    "RelativePath": "api/ThongBao/update-thongbao",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "thongBaoDTO",
+        "Type": "Service_PhongTro.DTOs.ThongBaoDTO",
         "IsRequired": true
       }
     ],
