@@ -686,6 +686,145 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "CreateThuePhong",
+    "RelativePath": "api/ThuePhong/add-thuephong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "thuePhongDTO",
+        "Type": "Service_PhongTro.DTOs.ThuePhongDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "DeleteThuePhongId",
+    "RelativePath": "api/ThuePhong/delete-thuephong-id",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "GetAllDichVu",
+    "RelativePath": "api/ThuePhong/get-all-thuephong-dichvu",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "GetAllDienNuoc",
+    "RelativePath": "api/ThuePhong/get-all-thuephong-diennuoc",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "GetAllLoaiPhong",
+    "RelativePath": "api/ThuePhong/get-all-thuephong-loaiphong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "GetAllNguoiThue",
+    "RelativePath": "api/ThuePhong/get-all-thuephong-nguoithue",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "GetAllPhongThue",
+    "RelativePath": "api/ThuePhong/get-all-thuephong-phong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "GetThuePhong",
+    "RelativePath": "api/ThuePhong/get-thuephong-list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "TinhTongTien",
+    "RelativePath": "api/ThuePhong/tinh-tong-tien",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "thuePhongId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Decimal",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.ThuePhongController",
+    "Method": "UpdateThuePhongId",
+    "RelativePath": "api/ThuePhong/update-thuephong-id",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "thuephongId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "thuePhongDTO",
+        "Type": "Service_PhongTro.DTOs.ThuePhongDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Service_PhongTro.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

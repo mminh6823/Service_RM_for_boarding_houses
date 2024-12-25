@@ -19,7 +19,7 @@ builder.Services.AddTransient<PhongService>();
 builder.Services.AddTransient<TaiKhoanNguoiDungService>();
 builder.Services.AddTransient<TaiKhoanService>();
 builder.Services.AddTransient<ThongBaoService>();
-
+builder.Services.AddTransient<ThuePhongService>();
 
 
 var app = builder.Build();
