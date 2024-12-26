@@ -28,6 +28,7 @@ Table DienNuoc: Record electricity and water usage and associated costs for each
 Table ThuePhong: Track rental agreements, including rental periods and deposits.
 Table HoaDon: Manage detailed invoice information such as rent, services, and other payments.
 Table ThongBao: Store notifications from landlords to tenants.
+
 ![image](https://github.com/user-attachments/assets/b5f6a386-760e-458d-bd9d-f413d5c998ae)
 
 4. Relationships Between Tables
