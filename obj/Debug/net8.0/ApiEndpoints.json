@@ -293,6 +293,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Service_PhongTro.Controllers.HoaDonController",
+    "Method": "AddHoaDon",
+    "RelativePath": "api/HoaDon/add-hoadon",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hoaDonDTO",
+        "Type": "Service_PhongTro.DTOs.HoaDonDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.HoaDonController",
+    "Method": "DeleteHoaDon",
+    "RelativePath": "api/HoaDon/delete-hoadon",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.HoaDonController",
+    "Method": "GetAllHoaDon",
+    "RelativePath": "api/HoaDon/get-all-hoadon",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Service_PhongTro.Controllers.LoaiPhongController",
     "Method": "AddLoaiPhong",
     "RelativePath": "api/LoaiPhong/add-loai-phong",

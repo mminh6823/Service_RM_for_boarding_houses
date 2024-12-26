@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Service_PhongTro.Models
 {
@@ -6,20 +8,18 @@ namespace Service_PhongTro.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required]
+        [ForeignKey("ThuePhong")]
         public int IDThuePhong { get; set; }
-        public DateTime ngayThanhToan { get; set; }
-        public decimal soTienThanhToan { get; set; }
-        public int trangThai { get; set; }
-        public string CMND_CCCD { get; set; }
-        public string tenPhong { get; set; }
-        public string loaiPhong { get; set; }
-        public decimal giaPhong { get; set; }
-        public int dienTieuThu { get; set; }
-        public decimal giaDien { get; set; }
-        public int nuocTieuThu { get; set; }
-        public decimal giaNuoc { get; set; }
-        public string DSdichVuSuDung { get; set; }
-        public string DSGiaDichVuSuDung { get; set; }
-        public ThuePhong thuePhong { get; set; }
+        [Required]
+        public DateTime NgayThanhToan { get; set; }
+        [Required]
+        [Column(TypeName = "decimal(15, 2)")]
+        public decimal TongTienThanhToan { get; set; }
+        [Required]
+        public int TrangThai { get; set; }
+
+        public ThuePhong ThuePhong { get; set; }
+        public string GhiChu { get; set; }
     }
 }

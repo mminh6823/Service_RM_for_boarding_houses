@@ -22,6 +22,9 @@ builder.Services.AddTransient<TaiKhoanService>();
 builder.Services.AddTransient<ThongBaoService>();
 builder.Services.AddTransient<ThuePhongService>();
 builder.Services.AddTransient<NguoiThueService>();
+builder.Services.AddTransient<HoaDonService>();
+
+
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>

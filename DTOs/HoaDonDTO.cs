@@ -1,24 +1,15 @@
 ﻿using Service_PhongTro.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Service_PhongTro.DTOs
 {
     public class HoaDonDTO
     {
         public int Id { get; set; }
-        public DateTime ngayThanhToan { get; set; }
-        public decimal soTienThanhToan { get; set; }
-        public int trangThai { get; set; }
-        public string CMND_CCCD { get; set; }
-        public string tenPhong { get; set; }
-        public string loaiPhong { get; set; }
-        public decimal giaPhong { get; set; }
-        public int dienTieuThu { get; set; }
-        public decimal giaDien { get; set; }
-        public int nuocTieuThu { get; set; }
-        public decimal giaNuoc { get; set; }
-        public string DSdichVuSuDung { get; set; }
-        public string DSGiaDichVuSuDung { get; set; }
-        public ThuePhongDTO thuePhong { get; set; }
-
+        public int IDThuePhong { get; set; }
+        public DateTime NgayThanhToan { get; set; }
+        public int TrangThai { get; set; }
+        public string? GhiChu { get; set; }
+        public decimal? TongTienThanhToan { get; set; }
     }
 }

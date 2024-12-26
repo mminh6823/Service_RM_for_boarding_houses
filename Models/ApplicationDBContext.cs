@@ -76,45 +76,33 @@ namespace Service_PhongTro.Models
              });
 
             modelBuilder.Entity<HoaDon>(
-             entity =>
-             {
-                 entity.Property(e => e.ngayThanhToan)
-                    .IsRequired();
-                 entity.Property(e => e.soTienThanhToan)
-                     .IsRequired();
-                 entity.Property(e => e.trangThai)
-                     .IsRequired();
-                 entity.Property(e => e.CMND_CCCD)
-                     .IsRequired();
-                 entity.Property(e => e.tenPhong)
-                     .IsUnicode(true)
-                     .IsRequired();
-                 entity.Property(e => e.loaiPhong)
-                     .IsUnicode(true)
-                     .IsRequired();
-                 entity.Property(e => e.giaPhong)
-                     .IsRequired();
-                 entity.Property(e => e.dienTieuThu)
-                     .IsRequired();
-                 entity.Property(e => e.giaDien)
-                     .IsRequired();
-                 entity.Property(e => e.nuocTieuThu)
-                     .IsRequired();
-                 entity.Property(e => e.giaNuoc)
-                     .IsRequired();
-                 entity.Property(e => e.DSdichVuSuDung)
-                     .HasMaxLength(500)
-                     .IsUnicode(true)
-                     .IsRequired();
-                 entity.Property(e => e.DSGiaDichVuSuDung)
-                     .HasMaxLength(500)
-                     .IsRequired();
-                 entity.HasOne(d => d.thuePhong)
-                     .WithMany(b => b.hoaDon)
-                     .HasForeignKey(d => d.IDThuePhong)
-                     .OnDelete(DeleteBehavior.ClientSetNull)
-                     .HasConstraintName("FK_HoaDon_ThuePhong"); 
-             });
+     entity =>
+     {
+         // Đảm bảo ngày thanh toán được yêu cầu
+         entity.Property(e => e.NgayThanhToan)
+             .IsRequired();
+
+         // Đảm bảo tổng tiền thanh toán là bắt buộc và định dạng chuẩn
+         entity.Property(e => e.TongTienThanhToan)
+             .IsRequired()
+             .HasColumnType("decimal(15, 2)");
+
+         // Trạng thái hóa đơn (0: Chưa thanh toán, 1: Đã thanh toán, 2: Hủy)
+         entity.Property(e => e.TrangThai)
+             .IsRequired();
+
+         // Ghi chú hóa đơn nếu có
+         entity.Property(e => e.GhiChu)
+             .HasMaxLength(500)
+             .IsUnicode(true);
+
+         // Thiết lập khóa ngoại liên kết với bảng ThuePhong
+         entity.HasOne(d => d.ThuePhong)
+             .WithMany(b => b.hoaDon)
+             .HasForeignKey(d => d.IDThuePhong)
+             .OnDelete(DeleteBehavior.ClientSetNull)
+             .HasConstraintName("FK_HoaDon_ThuePhong");
+     });
 
             modelBuilder.Entity<LoaiPhong>(
              entity =>
