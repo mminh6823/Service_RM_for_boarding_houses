@@ -8,14 +8,14 @@
         public DateTime ngayThue { get; set; }
         public DateTime ngayTra { get; set; }
         public decimal tienCoc { get; set; }
-        public string tenNguoithue { get; set; }
-        public string tenPhong { get; set; }
+        public string? tenNguoithue { get; set; }
+        public string? tenPhong { get; set; }
     }
     public class GetNguoiThueDTO
     {
         public int Id { get; set; }
 
-        public string tenNguoithue { get; set; }
+        public string? tenNguoithue { get; set; }
     }
 
     public class GetdienNuocDTO
@@ -42,7 +42,7 @@
         public decimal giaNuoc { get; set; }
         public int IDPhong { get; set; }
         public int IDDichVu { get; set; }
-        public string tenDichVu { get; set; }
+        public string? tenDichVu { get; set; }
         public decimal giaDichVu { get; set; }
         public string? tenLoaiPhong { get; set; }
         public decimal? giaPhong { get; set; }

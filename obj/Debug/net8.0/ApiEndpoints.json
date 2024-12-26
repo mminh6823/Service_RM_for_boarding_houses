@@ -372,6 +372,98 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Service_PhongTro.Controllers.NguoiThueController",
+    "Method": "CreateNguoiThue",
+    "RelativePath": "api/NguoiThue/create-nguoithue",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hoTen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "gioiTinh",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SDT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "queQuan",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ngaySinh",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CMND_CCCD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnhDaiDien",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "MatTruocCCCD",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "MatSauCMND",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "OtherImages",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.NguoiThueController",
+    "Method": "DeleteNguoiThue",
+    "RelativePath": "api/NguoiThue/delete-nguoithue",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service_PhongTro.Controllers.NguoiThueController",
+    "Method": "GetAllNguoiThue",
+    "RelativePath": "api/NguoiThue/get-all-nguoithue",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Service_PhongTro.Controllers.PhongController",
     "Method": "AddPhong",
     "RelativePath": "api/Phong/add-phong",

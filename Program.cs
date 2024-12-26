@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Service_PhongTro.Models;
 using Service_PhongTro.Service;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ApplicationDBContext>(option => 
-          option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<DayTroService>();
 builder.Services.AddTransient<DichVuService>();
@@ -20,6 +21,14 @@ builder.Services.AddTransient<TaiKhoanNguoiDungService>();
 builder.Services.AddTransient<TaiKhoanService>();
 builder.Services.AddTransient<ThongBaoService>();
 builder.Services.AddTransient<ThuePhongService>();
+builder.Services.AddTransient<NguoiThueService>();
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+    });
+
 
 
 var app = builder.Build();

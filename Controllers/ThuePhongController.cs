@@ -113,7 +113,7 @@ namespace Service_PhongTro.Controllers
         }
 
         [HttpDelete("delete-thuephong-id")]
-        public async Task<IActionResult> DeleteThuePhongId(int id)
+        public async Task<IActionResult> DeleteThuePhongId([FromQuery]int id)
         {
             try
             {

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Service_PhongTro.DTOs;
 using Service_PhongTro.Models;
 using System.Net.WebSockets;
@@ -7,7 +8,7 @@ namespace Service_PhongTro.Service
 {
     public class ThuePhongService
     {
-        private readonly ApplicationDBContext  _context;
+        private readonly ApplicationDBContext _context;
 
         public ThuePhongService(ApplicationDBContext context)
         {
@@ -84,7 +85,7 @@ namespace Service_PhongTro.Service
             });
             return _thuephong;
         }
-        public ThuePhong AddThuePhong(ThuePhongDTO thuePhongDTO)
+        public ThuePhong AddThuePhong([FromBody] ThuePhongDTO thuePhongDTO)
         {
             var _thuephong = new ThuePhong()
             {
@@ -100,7 +101,7 @@ namespace Service_PhongTro.Service
             return _thuephong;
         }
 
-        public ThuePhong? UpdateThuePhongId(int thuephongId, ThuePhongDTO thuePhongDTO)
+        public ThuePhong? UpdateThuePhongId([FromQuery] int thuephongId, [FromBody] ThuePhongDTO thuePhongDTO)
         {
             var _thuephong = _context.thuePhong.FirstOrDefault(n => n.Id == thuephongId);
             if (_thuephong != null)
@@ -120,7 +121,6 @@ namespace Service_PhongTro.Service
         {
             try
             {
-
                 var thuePhongExists = _context.thuePhong.Any(tp => tp.Id == thuePhongId);
                 if (!thuePhongExists)
                 {
@@ -131,8 +131,8 @@ namespace Service_PhongTro.Service
                                          join lp in _context.loaiPhong on p.IDLoaiPhong equals lp.Id
                                          where tp.Id == thuePhongId
                                          select lp.gia).FirstOrDefault();
- 
-               var tongtientheodichvu = (from tp in _context.thuePhong
+
+                var tongtientheodichvu = (from tp in _context.thuePhong
                                           join p in _context.phong on tp.IDPhong equals p.Id
                                           join dvsudung in _context.dichVuSuDung on p.Id equals dvsudung.IDPhong
                                           join dv in _context.dichVu on dvsudung.IDDichVu equals dv.Id
@@ -147,9 +147,9 @@ namespace Service_PhongTro.Service
                                                                                         where d.IDPhong == p.Id
                                                                                         orderby d.thoiGianHoaDon descending
                                                                                         select d.thoiGianHoaDon).FirstOrDefault()
-                                    select (dn.giaDien * dn.dienTieuThu)+(dn.giaNuoc * dn.nuocTieuThu)).FirstOrDefault();
+                                    select (dn.giaDien * dn.dienTieuThu) + (dn.giaNuoc * dn.nuocTieuThu)).FirstOrDefault();
 
-                if (tientheoLoaiPhong == null|| tongtientheodichvu == null || tongDienNuoc == null)
+                if (tientheoLoaiPhong == null || tongtientheodichvu == null || tongDienNuoc == null)
                 {
                     throw new Exception("1 trong những dịch vụ không tồn tại hoặc bị null.");
                 }
@@ -163,10 +163,7 @@ namespace Service_PhongTro.Service
                 throw new Exception($"Lỗi khi tính tổng tiền: {ex.Message}");
             }
         }
-
-
-
-        public async Task<ThuePhong?> DeleteThuePhongId(int id)
+        public async Task<ThuePhong?> DeleteThuePhongId([FromQuery] int id)
         {
             var _delete = await _context.thuePhong.FirstOrDefaultAsync(n => n.Id == id);
             if (_delete != null)
