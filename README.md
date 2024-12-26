@@ -29,6 +29,9 @@ Table HoaDon: Manage detailed invoice information such as rent, services, and ot
 Table ThongBao: Store notifications from landlords to tenants.
 
 
+[Uploading Service_PhongTro_TEST.postman_collection…]()
+
+
 ![image](https://github.com/user-attachments/assets/7980bee1-6b5c-42cf-9151-57c0799ed424)
 
 4. Relationships Between Tables
