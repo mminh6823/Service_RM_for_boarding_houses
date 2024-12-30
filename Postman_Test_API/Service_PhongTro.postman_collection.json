@@ -1,0 +1,1743 @@
+{
+	"info": {
+		"_postman_id": "529d07ac-da5e-4904-9384-87831e9a1729",
+		"name": "Service_PhongTro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38072572"
+	},
+	"item": [
+		{
+			"name": "DayTro",
+			"item": [
+				{
+					"name": "Get_List_DayTro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DayTro/get-daytro-list",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DayTro",
+								"get-daytro-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_DayTro_by_ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DayTro/get-daytro-by-id?id=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DayTro",
+								"get-daytro-by-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_DayTro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"tenDayTro\": \"Dãy K\",\r\n        \"soLuongPhong\": 99\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/DayTro/add-daytro",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DayTro",
+								"add-daytro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_DayTro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tenDayTro\": \"Dãy D\",\r\n    \"soLuongPhong\": 86\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/DayTro/update-daytro?id=8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DayTro",
+								"update-daytro"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_DayTro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DayTro/delete-daytro?id=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DayTro",
+								"delete-daytro"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DichVu",
+			"item": [
+				{
+					"name": "Get_List_DichVu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DichVu/get-dich-vu",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVu",
+								"get-dich-vu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_DichVu_by_ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DichVu/get-dich-vu-id?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVu",
+								"get-dich-vu-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_DichVu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"tenDichVu\": \"Quỹ thể theo khu trọ\",\r\n        \"giaDichVu\": 65000.00\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/DichVu/add-dich-vu",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVu",
+								"add-dich-vu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_DichVu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"tenDichVu\": \"Thuế giá trị gia tăng\",\r\n        \"giaDichVu\": 10000.00\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/DichVu/update-dich-vu?id=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVu",
+								"update-dich-vu"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_DichVu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/DichVu/delete-dich-vu?id=7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVu",
+								"delete-dich-vu"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DichVuSuDung",
+			"item": [
+				{
+					"name": "Get_DichVu_Phong",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DichVuSuDung/get-dich-vu-sd-phong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVuSuDung",
+								"get-dich-vu-sd-phong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_DichVu_DichVuSD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DichVuSuDung/get-dich-vu-sd",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVuSuDung",
+								"get-dich-vu-sd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_List_ChiTiet_DichVu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DichVuSuDung/get-all-detail-dich-vu-sd",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVuSuDung",
+								"get-all-detail-dich-vu-sd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_DichVuSD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idPhong\": 2,\r\n        \"idDichVu\": 3\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/DichVuSuDung/add-dich-vu-sd",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVuSuDung",
+								"add-dich-vu-sd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_DichVuSD",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DichVuSuDung/delete-dich-vu-sd?idDichVu=6&idPhong=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DichVuSuDung",
+								"delete-dich-vu-sd"
+							],
+							"query": [
+								{
+									"key": "idDichVu",
+									"value": "6"
+								},
+								{
+									"key": "idPhong",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DienNuoc",
+			"item": [
+				{
+					"name": "Get_DienNuoc_Phong",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DienNuoc/get-list-ten-phong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DienNuoc",
+								"get-list-ten-phong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_DienNuoc",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idPhong\": 1,\r\n        \"thoiGianHoaDon\": \"2024-12-23T15:26:14.2152279\",\r\n        \"dienTieuThu\": 20,\r\n        \"giaDien\": 3400.00,\r\n        \"nuocTieuThu\": 18,\r\n        \"giaNuoc\": 15000.00\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/DienNuoc/add-dien-nuoc",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DienNuoc",
+								"add-dien-nuoc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_List_Dien_Nuoc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DienNuoc/get-dien-nuoc",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DienNuoc",
+								"get-dien-nuoc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Dien_Nuoc_byID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DienNuoc/get-dien-nuoc-id?id=12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DienNuoc",
+								"get-dien-nuoc-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Dien_Nuoc",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/DienNuoc/delete-dien-nuoc?id=11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"DienNuoc",
+								"delete-dien-nuoc"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoaiPhong",
+			"item": [
+				{
+					"name": "Get_Loai_Phong",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/LoaiPhong/get-loai-phong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"LoaiPhong",
+								"get-loai-phong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Loai_Phong_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/LoaiPhong/get-loai-phong-by-id?id=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"LoaiPhong",
+								"get-loai-phong-by-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_Loai_Phong",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"tenLoaiPhong\": \"Phòng Homestay VIP\",\r\n        \"gia\": 5200000.00,\r\n        \"soNguoi\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/LoaiPhong/add-loai-phong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"LoaiPhong",
+								"add-loai-phong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Loai_Phong",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"tenLoaiPhong\": \"Phòng đơn\",\r\n        \"gia\": 1000000.00,\r\n        \"soNguoi\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/LoaiPhong/update-loai-phong?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"LoaiPhong",
+								"update-loai-phong"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Loai_Phong",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/LoaiPhong/delete-loai-phong?id=6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"LoaiPhong",
+								"delete-loai-phong"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Phong",
+			"item": [
+				{
+					"name": "Get_Loai_Phong",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/Phong/get-loai-phong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"Phong",
+								"get-loai-phong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_All_Phong",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/Phong/get-all-phong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"Phong",
+								"get-all-phong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_Phong",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"tenPhong\": \"Phòng 107\",\r\n        \"idLoaiPhong\": 2,\r\n        \"idDayTro\": 1,\r\n        \"conPhong\": true\r\n       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/Phong/add-phong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"Phong",
+								"add-phong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Phong",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"tenPhong\": \"Phòng 108\",\r\n        \"idLoaiPhong\": 1,\r\n        \"idDayTro\": 5,\r\n         \"soNguoiDangO\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/Phong/update-phong?id=6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"Phong",
+								"update-phong"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Phong",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/Phong/delete-phong?id=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"Phong",
+								"delete-phong"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TaiKhoanNguoiDung",
+			"item": [
+				{
+					"name": "Get_List_Nguoi_Thue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoanNguoiDung/get-all-nguoithue",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoanNguoiDung",
+								"get-all-nguoithue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_List_TaiKhoanNguoiDung",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoanNguoiDung/get-all-taikhoannguoidung",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoanNguoiDung",
+								"get-all-taikhoannguoidung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_TaiKhoanNguoiDung_byId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoanNguoiDung/get-taikhoannguoidung",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoanNguoiDung",
+								"get-taikhoannguoidung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_TaiKhoanNguoiDung",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"cmnD_CCCD\": \"123456789\",\r\n        \"matKhau\": \"Minhdeptraiquaminhoi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoanNguoiDung/add-taikhoannguoidung",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoanNguoiDung",
+								"add-taikhoannguoidung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_TaiKhoanNguoiDung",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"cmnD_CCCD\": \"03520030011123\",\r\n        \"matKhau\": \"Minhdeptrainhatthegioi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoanNguoiDung/update-taikhoannguoidung?id=7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoanNguoiDung",
+								"update-taikhoannguoidung"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_TaiKhoanNguoiDung",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoanNguoiDung/delete-taikhoannguoidung?id=8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoanNguoiDung",
+								"delete-taikhoannguoidung"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TaiKhoan",
+			"item": [
+				{
+					"name": "Get_List_TaiKhoan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoan/get-all-taikhoan",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoan",
+								"get-all-taikhoan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_TaiKhoan_byID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoan/get-taikhoan?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoan",
+								"get-taikhoan"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_TaiKhoan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n     \"taiKhoan\": \"Hello Guys\",\r\n    \"matKhau\": \"doanhbatduocemhahaha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoan/update-taikhoan?id=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoan",
+								"update-taikhoan"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_TaiKhoan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/TaiKhoan/delete-taikhoan?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"TaiKhoan",
+								"delete-taikhoan"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ThongBao",
+			"item": [
+				{
+					"name": "Get_List-ThongBao",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThongBao/get-all-thongbao",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThongBao",
+								"get-all-thongbao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_ThongBao_byID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThongBao/get-thongbao?id=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThongBao",
+								"get-thongbao"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_ThongBao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tieuDe\": \"Tuyển cộng tác viên, đối tác giới thiệu sản phẩm chung cư mini\",\r\n    \"ngayDang\": \"2024-12-22T15:30:00\",\r\n    \"moTa\": \"Chung cư mini đạt chuẩn an toàn pccc, nội thất đầy đủ chỉ cần chuyển đồ đến ở giá 5 triệu/tháng.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/ThongBao/add-thongbao",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThongBao",
+								"add-thongbao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_ThongBao",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tieuDe\": \"Hướng dẫn thuê phòng nhanh chóng, hiệu quả với MiniShopHouse\",\r\n    \"ngayDang\": \"2024-12-22T15:30:00\",\r\n    \"moTa\": \"Liên hệ qua hotline 0999888565 để được hỗ trợ tìm phòng phù hợp và giá tốt nhất tại Hà Nội\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/ThongBao/update-thongbao?id=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThongBao",
+								"update-thongbao"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_ThongBao",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThongBao/delete-thongbao?id=8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThongBao",
+								"delete-thongbao"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ThuePhong",
+			"item": [
+				{
+					"name": "Get_ThuePhong_Phong",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/get-all-thuephong-phong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"get-all-thuephong-phong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_ThuePhong_NguoiThue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/get-all-thuephong-nguoithue",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"get-all-thuephong-nguoithue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_ThuePhong_LoaiPhong",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/get-all-thuephong-loaiphong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"get-all-thuephong-loaiphong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_ThuePhong_List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/get-thuephong-list",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"get-thuephong-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_ThuePhong_DienNuoc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/get-all-thuephong-diennuoc",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"get-all-thuephong-diennuoc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_ThuePhong_DichVu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/get-all-thuephong-dichvu",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"get-all-thuephong-dichvu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_TongTien_ThuePhong",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/tinh-tong-tien?thuePhongId=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"tinh-tong-tien"
+							],
+							"query": [
+								{
+									"key": "thuePhongId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_ThuePhong",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idPhong\": 2,\r\n        \"idNguoiThue\": 3,\r\n        \"ngayThue\": \"2024-01-01T00:00:00\",\r\n        \"ngayTra\": \"2024-10-10T00:00:00\",\r\n        \"tienCoc\": 2340000.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/add-thuephong",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"add-thuephong"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_ThuePhong",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idPhong\": 3,\r\n        \"idNguoiThue\": 2,\r\n        \"ngayThue\": \"2024-01-01T00:00:00\",\r\n        \"ngayTra\": \"2024-10-10T00:00:00\",\r\n        \"tienCoc\": 2330000.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/update-thuephong-id?thuephongId=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"update-thuephong-id"
+							],
+							"query": [
+								{
+									"key": "thuephongId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_ThuePhong",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/ThuePhong/delete-thuephong-id?id=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"ThuePhong",
+								"delete-thuephong-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "NguoiThue",
+			"item": [
+				{
+					"name": "Get_List_NguoiThue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/NguoiThue/get-all-nguoithue",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"NguoiThue",
+								"get-all-nguoithue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_NguoiThue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hoten",
+									"value": "Nguyễn Đức Minh",
+									"type": "text"
+								},
+								{
+									"key": "gioiTinh",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sdt",
+									"value": "0999388123",
+									"type": "text"
+								},
+								{
+									"key": "queQuan",
+									"value": "Hà Nam",
+									"type": "text"
+								},
+								{
+									"key": "ngaySinh",
+									"value": "2003-06-08T00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "cmnD_CCCD",
+									"value": "0352032221235",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mminh123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "anhDaiDien",
+									"type": "file",
+									"src": "/D:/.Net/Service_PhongTro/Upload/avt.jpg"
+								},
+								{
+									"key": "matTruocCCCD",
+									"type": "file",
+									"src": "cccdmatruoc.jpg"
+								},
+								{
+									"key": "matSauCMND",
+									"type": "file",
+									"src": "cccdmatsau.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/NguoiThue/create-nguoithue",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"NguoiThue",
+								"create-nguoithue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_NguoiThue",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/NguoiThue/delete-nguoithue?id=7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"NguoiThue",
+								"delete-nguoithue"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HoaDon",
+			"item": [
+				{
+					"name": "Get_List_HoaDon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/HoaDon/get-all-hoadon",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"HoaDon",
+								"get-all-hoadon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_HoaDon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IDThuePhong\": 2,\r\n    \"NgayThanhToan\": \"2024-12-26T14:30:00\",\r\n    \"TrangThai\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7274/api/HoaDon/add-hoadon",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"HoaDon",
+								"add-hoadon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_HoaDon",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7274/api/HoaDon/delete-hoadon?id=13",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7274",
+							"path": [
+								"api",
+								"HoaDon",
+								"delete-hoadon"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
