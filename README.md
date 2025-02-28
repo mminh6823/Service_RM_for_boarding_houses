@@ -47,3 +47,4 @@ Optimized Management: Minimize errors and save time for landlords.
 Increased Transparency: Provide clear information on costs, services, and invoices.
 Enhanced User Experience: Allow tenants to easily track their rental details and payments through the system.
 Scalable and Maintainable: A well-structured database design that facilitates future feature additions and system upgrades.
+Link Demo https://phongtroapi-grcqa7b7cehkefhv.eastasia-01.azurewebsites.net/index.html
