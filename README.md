@@ -29,7 +29,6 @@ Table HoaDon: Manage detailed invoice information such as rent, services, and ot
 Table ThongBao: Store notifications from landlords to tenants.
 
 
-[Uploading Service_PhongTro_TEST.postman_collection…]()
 
 
 ![image](https://github.com/user-attachments/assets/7980bee1-6b5c-42cf-9151-57c0799ed424)
@@ -47,4 +46,4 @@ Optimized Management: Minimize errors and save time for landlords.
 Increased Transparency: Provide clear information on costs, services, and invoices.
 Enhanced User Experience: Allow tenants to easily track their rental details and payments through the system.
 Scalable and Maintainable: A well-structured database design that facilitates future feature additions and system upgrades.
-Link Demo https://phongtroapi-grcqa7b7cehkefhv.eastasia-01.azurewebsites.net/index.html
+Link Demo Swagger: [https://phongtroapi-grcqa7b7cehkefhv.eastasia-01.azurewebsites.net/index.html](https://phongtroservice-api-f0bcg0c6cgbagvd3.eastasia-01.azurewebsites.net/index.html)
