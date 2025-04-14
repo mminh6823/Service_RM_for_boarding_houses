@@ -29,45 +29,34 @@ namespace Service_PhongTro.Service
         {
             try
             {
-                // Lấy tiền theo loại phòng
-                var tientheoLoaiPhong = (
-                                         from tp in _context.thuePhong 
-                                         join p in _context.phong on tp.IDPhong equals p.Id
-                                         join lp in _context.loaiPhong on p.IDLoaiPhong equals lp.Id
-                                         where tp.Id == idthuephong
-                                         select lp.gia).FirstOrDefault() ?? 0;
+                var tongtien = (
+                    from tp in _context.thuePhong
+                    join p in _context.phong on tp.IDPhong equals p.Id
+                    join lp in _context.loaiPhong on p.IDLoaiPhong equals lp.Id
+                    join dvsudung in _context.dichVuSuDung on p.Id equals dvsudung.IDPhong into dvGroup
+                    from dvs in dvGroup.DefaultIfEmpty()
+                    join dv in _context.dichVu on dvs.IDDichVu equals dv.Id into dvJoin
+                    from dichvu in dvJoin.DefaultIfEmpty()
+                    join dn in _context.dienNuoc on p.Id equals dn.IDPhong into dnGroup
+                    from diennuoc in dnGroup
+                        .Where(d => d.thoiGianHoaDon == _context.dienNuoc
+                            .Where(x => x.IDPhong == p.Id)
+                            .Max(x => x.thoiGianHoaDon))
+                        .DefaultIfEmpty()
+                    where tp.Id == idthuephong
+                    group new { lp, dichvu, diennuoc, tp } by new { lp.gia, tp.tienCoc } into g
+                    select new
+                    {
+                        TienLoaiPhong = g.Key.gia,
+                        TienCoc = g.Key.tienCoc,
+                        TongTienDichVu = g.Sum(x => x.dichvu != null ? x.dichvu.giaDichVu : 0),
+                        TongDienNuoc = g.Sum(x => x.diennuoc != null ? (x.diennuoc.giaDien * x.diennuoc.dienTieuThu) + (x.diennuoc.giaNuoc * x.diennuoc.nuocTieuThu) : 0)
+                    }).FirstOrDefault();
 
-                // Tính tổng tiền dịch vụ
-                var tongtientheodichvu = (
-                                          from tp in _context.thuePhong 
-                                          join p in _context.phong on tp.IDPhong equals p.Id
-                                          join dvsudung in _context.dichVuSuDung on p.Id equals dvsudung.IDPhong
-                                          join dv in _context.dichVu on dvsudung.IDDichVu equals dv.Id
-                                          where tp.Id == idthuephong
-                                          select dv.giaDichVu).Sum() ;
-
-                // Tính tiền điện nước
-                var tongDienNuoc = (
-                                     from tp in _context.thuePhong 
-                                    join p in _context.phong on tp.IDPhong equals p.Id
-                                    join dn in _context.dienNuoc on p.Id equals dn.IDPhong
-                                    where tp.Id == idthuephong &&
-                                          dn.thoiGianHoaDon == (from d in _context.dienNuoc
-                                                                where d.IDPhong == p.Id
-                                                                orderby d.thoiGianHoaDon descending
-                                                                select d.thoiGianHoaDon).FirstOrDefault()
-                                    select (dn.giaDien * dn.dienTieuThu) + (dn.giaNuoc * dn.nuocTieuThu)).FirstOrDefault();
-
-                // Tiền cọc
-                var tiencoc = (
-                               from tp in _context.thuePhong 
-                               where tp.Id == idthuephong
-                               select tp.tienCoc).FirstOrDefault() ;
-
-                // Tính tổng tiền thanh toán
-                decimal tongtienthanhtoan = (tongtientheodichvu + tongDienNuoc + tientheoLoaiPhong) - tiencoc;
+                decimal tongtienthanhtoan = (tongtien?.TongTienDichVu ?? 0) + (tongtien?.TongDienNuoc ?? 0) + (tongtien?.TienLoaiPhong ?? 0) - (tongtien?.TienCoc ?? 0);
 
                 return tongtienthanhtoan;
+
             }
             catch (Exception ex)
             {

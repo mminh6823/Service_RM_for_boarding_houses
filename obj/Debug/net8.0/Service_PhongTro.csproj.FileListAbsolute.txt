@@ -136,7 +136,6 @@ D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\staticwebassets\msbui
 D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Service_PhongTro.props
 D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Service_PhongTro.props
 D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\staticwebassets.pack.json
-D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\Service_.FB9B4E2B.Up2Date
 D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\Service_PhongTro.dll
 D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\refint\Service_PhongTro.dll
@@ -265,3 +264,8 @@ D:\.Net\Service_PhongTro\Service_PhongTro\bin\Debug\net8.0\runtimes\win\lib\net7
 D:\.Net\Service_PhongTro\Service_PhongTro\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\.Net\Service_PhongTro\Service_PhongTro\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\Service_PhongTro.sourcelink.json
+D:\.Net\Service_PhongTro\Service_PhongTro\bin\Debug\net8.0\Postman_Test_API\Service_PhongTro.postman_collection.json
+D:\.Net\Service_PhongTro\Service_PhongTro\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\.Net\Service_PhongTro\Service_PhongTro\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\.Net\Service_PhongTro\Service_PhongTro\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\.Net\Service_PhongTro\Service_PhongTro\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

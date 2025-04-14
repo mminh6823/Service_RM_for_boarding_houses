@@ -1,0 +1,1822 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "PhongTroService API",
+    "description": "API_phong_tro",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/DayTro/get-daytro-list": {
+      "get": {
+        "tags": [
+          "DayTro"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DayTro/get-daytro-by-id": {
+      "get": {
+        "tags": [
+          "DayTro"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DayTro/add-daytro": {
+      "post": {
+        "tags": [
+          "DayTro"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DayTroDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DayTroDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DayTroDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DayTro/update-daytro": {
+      "put": {
+        "tags": [
+          "DayTro"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DayTroDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DayTroDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DayTroDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DayTro/delete-daytro": {
+      "delete": {
+        "tags": [
+          "DayTro"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVu/get-dich-vu": {
+      "get": {
+        "tags": [
+          "DichVu"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVu/get-dich-vu-id": {
+      "get": {
+        "tags": [
+          "DichVu"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVu/add-dich-vu": {
+      "post": {
+        "tags": [
+          "DichVu"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DichVuDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DichVuDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DichVuDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVu/update-dich-vu": {
+      "put": {
+        "tags": [
+          "DichVu"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DichVuDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DichVuDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DichVuDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVu/delete-dich-vu": {
+      "delete": {
+        "tags": [
+          "DichVu"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVuSuDung/get-dich-vu-sd-phong": {
+      "get": {
+        "tags": [
+          "DichVuSuDung"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVuSuDung/get-dich-vu-sd": {
+      "get": {
+        "tags": [
+          "DichVuSuDung"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVuSuDung/get-all-detail-dich-vu-sd": {
+      "get": {
+        "tags": [
+          "DichVuSuDung"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVuSuDung/add-dich-vu-sd": {
+      "post": {
+        "tags": [
+          "DichVuSuDung"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDichVuSuDungDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDichVuSuDungDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDichVuSuDungDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DichVuSuDung/delete-dich-vu-sd": {
+      "delete": {
+        "tags": [
+          "DichVuSuDung"
+        ],
+        "parameters": [
+          {
+            "name": "idDichVu",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idPhong",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DienNuoc/get-list-ten-phong": {
+      "get": {
+        "tags": [
+          "DienNuoc"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DienNuoc/get-dien-nuoc": {
+      "get": {
+        "tags": [
+          "DienNuoc"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DienNuoc/get-dien-nuoc-id": {
+      "get": {
+        "tags": [
+          "DienNuoc"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DienNuoc/add-dien-nuoc": {
+      "post": {
+        "tags": [
+          "DienNuoc"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DienNuocDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DienNuocDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DienNuocDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DienNuoc/delete-dien-nuoc": {
+      "delete": {
+        "tags": [
+          "DienNuoc"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/HoaDon/get-all-hoadon": {
+      "get": {
+        "tags": [
+          "HoaDon"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/HoaDon/add-hoadon": {
+      "post": {
+        "tags": [
+          "HoaDon"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HoaDonDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HoaDonDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HoaDonDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/HoaDon/delete-hoadon": {
+      "delete": {
+        "tags": [
+          "HoaDon"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LoaiPhong/get-loai-phong": {
+      "get": {
+        "tags": [
+          "LoaiPhong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LoaiPhong/get-loai-phong-by-id": {
+      "get": {
+        "tags": [
+          "LoaiPhong"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LoaiPhong/add-loai-phong": {
+      "post": {
+        "tags": [
+          "LoaiPhong"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoaiPhongDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoaiPhongDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoaiPhongDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LoaiPhong/update-loai-phong": {
+      "put": {
+        "tags": [
+          "LoaiPhong"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoaiPhongDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoaiPhongDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoaiPhongDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LoaiPhong/delete-loai-phong": {
+      "delete": {
+        "tags": [
+          "LoaiPhong"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/NguoiThue/get-all-nguoithue": {
+      "get": {
+        "tags": [
+          "NguoiThue"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/NguoiThue/create-nguoithue": {
+      "post": {
+        "tags": [
+          "NguoiThue"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "hoTen": {
+                    "type": "string"
+                  },
+                  "gioiTinh": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "SDT": {
+                    "type": "string"
+                  },
+                  "queQuan": {
+                    "type": "string"
+                  },
+                  "ngaySinh": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "CMND_CCCD": {
+                    "type": "string"
+                  },
+                  "Email": {
+                    "type": "string"
+                  },
+                  "AnhDaiDien": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "MatTruocCCCD": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "MatSauCMND": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "OtherImages": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "hoTen": {
+                  "style": "form"
+                },
+                "gioiTinh": {
+                  "style": "form"
+                },
+                "SDT": {
+                  "style": "form"
+                },
+                "queQuan": {
+                  "style": "form"
+                },
+                "ngaySinh": {
+                  "style": "form"
+                },
+                "CMND_CCCD": {
+                  "style": "form"
+                },
+                "Email": {
+                  "style": "form"
+                },
+                "AnhDaiDien": {
+                  "style": "form"
+                },
+                "MatTruocCCCD": {
+                  "style": "form"
+                },
+                "MatSauCMND": {
+                  "style": "form"
+                },
+                "OtherImages": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/NguoiThue/delete-nguoithue": {
+      "delete": {
+        "tags": [
+          "NguoiThue"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Phong/get-loai-phong": {
+      "get": {
+        "tags": [
+          "Phong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Phong/get-day-tro": {
+      "get": {
+        "tags": [
+          "Phong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Phong/get-all-phong": {
+      "get": {
+        "tags": [
+          "Phong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Phong/add-phong": {
+      "post": {
+        "tags": [
+          "Phong"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PhongDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PhongDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PhongDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Phong/update-phong": {
+      "put": {
+        "tags": [
+          "Phong"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PhongDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PhongDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PhongDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Phong/delete-phong": {
+      "delete": {
+        "tags": [
+          "Phong"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoan/get-all-taikhoan": {
+      "get": {
+        "tags": [
+          "TaiKhoan"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoan/get-taikhoan": {
+      "get": {
+        "tags": [
+          "TaiKhoan"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoan/update-taikhoan": {
+      "put": {
+        "tags": [
+          "TaiKhoan"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaiKhoanDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaiKhoanDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaiKhoanDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoan/delete-taikhoan": {
+      "delete": {
+        "tags": [
+          "TaiKhoan"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoanNguoiDung/get-all-nguoithue": {
+      "get": {
+        "tags": [
+          "TaiKhoanNguoiDung"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoanNguoiDung/get-all-taikhoannguoidung": {
+      "get": {
+        "tags": [
+          "TaiKhoanNguoiDung"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoanNguoiDung/get-taikhoannguoidung": {
+      "get": {
+        "tags": [
+          "TaiKhoanNguoiDung"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoanNguoiDung/add-taikhoannguoidung": {
+      "post": {
+        "tags": [
+          "TaiKhoanNguoiDung"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaiKhoanNguoiDungDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaiKhoanNguoiDungDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaiKhoanNguoiDungDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoanNguoiDung/update-taikhoannguoidung": {
+      "put": {
+        "tags": [
+          "TaiKhoanNguoiDung"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaiKhoanNguoiDungDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaiKhoanNguoiDungDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaiKhoanNguoiDungDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaiKhoanNguoiDung/delete-taikhoannguoidung": {
+      "delete": {
+        "tags": [
+          "TaiKhoanNguoiDung"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThongBao/get-all-thongbao": {
+      "get": {
+        "tags": [
+          "ThongBao"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThongBao/get-thongbao": {
+      "get": {
+        "tags": [
+          "ThongBao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThongBao/add-thongbao": {
+      "post": {
+        "tags": [
+          "ThongBao"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThongBaoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThongBaoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThongBaoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThongBao/update-thongbao": {
+      "put": {
+        "tags": [
+          "ThongBao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThongBaoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThongBaoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThongBaoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThongBao/delete-thongbao": {
+      "delete": {
+        "tags": [
+          "ThongBao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/get-all-thuephong-phong": {
+      "get": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/get-all-thuephong-nguoithue": {
+      "get": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/get-all-thuephong-loaiphong": {
+      "get": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/get-thuephong-list": {
+      "get": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/get-all-thuephong-diennuoc": {
+      "get": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/get-all-thuephong-dichvu": {
+      "get": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/tinh-tong-tien": {
+      "get": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "parameters": [
+          {
+            "name": "thuePhongId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/add-thuephong": {
+      "post": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThuePhongDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThuePhongDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThuePhongDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/update-thuephong-id": {
+      "put": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "parameters": [
+          {
+            "name": "thuephongId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThuePhongDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThuePhongDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThuePhongDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThuePhong/delete-thuephong-id": {
+      "delete": {
+        "tags": [
+          "ThuePhong"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DayTroDTO": {
+        "type": "object",
+        "properties": {
+          "tenDayTro": {
+            "type": "string",
+            "nullable": true
+          },
+          "soLuongPhong": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DichVuDTO": {
+        "type": "object",
+        "properties": {
+          "tenDichVu": {
+            "type": "string",
+            "nullable": true
+          },
+          "giaDichVu": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DienNuocDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idPhong": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "thoiGianHoaDon": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dienTieuThu": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "giaDien": {
+            "type": "number",
+            "format": "double"
+          },
+          "nuocTieuThu": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "giaNuoc": {
+            "type": "number",
+            "format": "double"
+          },
+          "tenPhong": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetDichVuSuDungDTO": {
+        "type": "object",
+        "properties": {
+          "idPhong": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idDichVu": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tenDichVu": {
+            "type": "string",
+            "nullable": true
+          },
+          "giaDichVu": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HoaDonDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idThuePhong": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ngayThanhToan": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "trangThai": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ghiChu": {
+            "type": "string",
+            "nullable": true
+          },
+          "tongTienThanhToan": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoaiPhongDTO": {
+        "type": "object",
+        "properties": {
+          "tenLoaiPhong": {
+            "type": "string",
+            "nullable": true
+          },
+          "gia": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "soNguoi": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PhongDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tenPhong": {
+            "type": "string",
+            "nullable": true
+          },
+          "idLoaiPhong": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tenLoaiPhong": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenDayTro": {
+            "type": "string",
+            "nullable": true
+          },
+          "conPhong": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "idDayTro": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "soNguoiDangO": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "soNguoi": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TaiKhoanDTO": {
+        "type": "object",
+        "properties": {
+          "taiKhoan": {
+            "type": "string",
+            "nullable": true
+          },
+          "matKhau": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TaiKhoanNguoiDungDTO": {
+        "type": "object",
+        "properties": {
+          "cmnD_CCCD": {
+            "type": "string",
+            "nullable": true
+          },
+          "matKhau": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ThongBaoDTO": {
+        "type": "object",
+        "properties": {
+          "tieuDe": {
+            "type": "string",
+            "nullable": true
+          },
+          "ngayDang": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "moTa": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ThuePhongDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idPhong": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idNguoiThue": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ngayThue": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ngayTra": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tienCoc": {
+            "type": "number",
+            "format": "double"
+          },
+          "tenNguoithue": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenPhong": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
